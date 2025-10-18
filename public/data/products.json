@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "name": "Tacos de Surtido",
+    "price": 4500,
+    "category": "tacos",
+    "description": "Taco de carnitas estilo Michoacan surtida.",
+    "images": "/images/Taco_de_surtido.png"
+  },
+  {
+    "id": "2",
+    "name": "Salsa Picante",
+    "price": 3200,
+    "category": "salsas",
+    "description": "Salsa de Tomate tatemado, sebolla, ajo y una seleccion de chiles picantes.",
+    "images": "/images/salsaroja.jpg"
+  },
+  {
+    "id": "3",
+    "name": "Tortillas por 12",
+    "category": "tortillas",
+    "price": 1200,
+    "description": "Tortillas de maiz Nixtamilizado ideal para acompañar tus carnitas o algun antojito.",
+    "images": "/images/tortilla.jpg"
+  }
+]

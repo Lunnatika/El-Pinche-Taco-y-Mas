@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  flex-direction: column; /*  esto apila los elementos uno debajo del otro */
+  align-items: center;    /* centra todo horizontalmente */
+  background-color: #d3d3d3;
+  padding: 1rem;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.header h1 {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+
+.degradado-mexico {
+  display: inline-block;
+  background: linear-gradient(to right, #008c45, #ffffff, #cd212a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  -webkit-text-stroke: 0.6px black;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}

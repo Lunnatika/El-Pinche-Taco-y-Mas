@@ -1,0 +1,27 @@
+.producto {
+  width: 23%;
+  min-width: 250px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 30px;
+  border: 3px solid #fa020260;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+  padding: 10px 12px;
+  margin: 10px auto;
+  transition: transform 0.2s;
+}
+
+.producto:hover {
+  transform: scale(1.02);
+}
+
+.producto-imagen {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.producto h2,
+.producto p {
+  margin: 5px 0;
+}

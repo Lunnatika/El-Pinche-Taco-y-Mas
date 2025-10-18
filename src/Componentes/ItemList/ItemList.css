@@ -1,0 +1,33 @@
+.productos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Responsividad */
+@media (max-width: 1200px) {
+  .productos-container {
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 768px) {
+  .productos-container .producto {
+    width: 45%;
+    min-width: unset;
+  }
+}
+
+@media (max-width: 480px) {
+  .productos-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .productos-container .producto {
+    width: 90%;
+  }
+}
