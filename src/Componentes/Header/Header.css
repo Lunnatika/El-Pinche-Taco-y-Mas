@@ -2,7 +2,8 @@
   display: flex;
   flex-direction: column; /*  esto apila los elementos uno debajo del otro */
   align-items: center;    /* centra todo horizontalmente */
-  background-color: #d3d3d3;
+  border-radius: 50px;
+  background-color: hsla(34, 88%, 78%, 0.301);
   padding: 1rem;
 }
 
