@@ -20,7 +20,7 @@
 }
 
 body {
-  background: url("images/tacofondo.jpg") no-repeat center center fixed;
+  background: url("/assets/image/tacofondo.jpg") no-repeat center center fixed;
   background-size: cover;
 }
 
