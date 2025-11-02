@@ -1,20 +1,21 @@
 
 import { useCartContext } from "../../context/CartContext/CartContext";
 import { Item } from "../Item/Item";
-import { Boton } from "../Boton.jsx";
+
+import { Count } from "../Count/Count.jsx";
 
 export const ItemDetail = ({ detail }) => {
   const {addItem} = useCartContext (); //desestructuro la funcion del contexto
+  
+  const handleadd =(quantity) => {
+    addItem ({...detail, quantity});
+  } 
+ 
+ 
   return (
     <Item {...detail}>
-      <Boton
-        texto={"Agregar al carrito"}
-        onClick={() => { addItem(detail);
-
-        }}
-      >
-  
-      </Boton>
+      <Count btnText={"Agregar al carrito"} onConfirm ={handleadd} />
+      
     </Item>
   );
 };

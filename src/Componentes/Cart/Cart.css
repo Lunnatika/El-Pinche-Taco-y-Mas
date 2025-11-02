@@ -1,0 +1,104 @@
+.cart-container {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: rgba(249, 194, 146, 0.197); /* Transparente para ver el fondo */
+  border-radius: 60px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(6px);
+  text-align: center;
+}
+
+.cart-container h2 {
+  font-size: 2.2rem;
+  color: #007a33; /* verde bandera */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1.5rem;
+}
+
+.cart-container p {
+  color: #333;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+/* Cada producto en el carrito */
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(0, 122, 51, 0.2);
+  border-radius: 20px;
+  padding: 1rem 1.5rem;
+  margin: 1rem 0;
+  transition: transform 0.2s ease;
+}
+
+.item:hover {
+  transform: scale(1.02);
+}
+
+/* Texto de cantidad */
+.item span {
+  color: #444;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* Botón eliminar (puede usar .boton pero en versión más pequeña) */
+.item button {
+  background: linear-gradient(to right, #d42d2d, #ffffff, #007a33);
+  color: #333;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 14px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+
+.item button:hover {
+  transform: scale(1.05);
+}
+
+/* Resumen del carrito */
+.cart-summary {
+  border-top: 3px dashed #007a33;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+}
+
+.total-price p {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #0a0a0a;
+  margin-bottom: 1.5rem;
+}
+
+/* Botones reutilizando tu clase .boton */
+.checkout-button,
+.clear-cart,
+.back-to-shop {
+ 
+  margin: 0.5rem;
+}
+
+.clear-cart {
+  background: linear-gradient(to right, #d42d2d, #ffffff, #007a33);
+}
+
+.back-to-shop {
+  background: linear-gradient(to right, #d42d2d, #ffffff, #007a33);
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 30px;
+  margin-top: 1.5rem;
+}
+
+.back-to-shop:hover {
+  transform: scale(1.05);
+}

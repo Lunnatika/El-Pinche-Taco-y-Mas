@@ -11,25 +11,56 @@ export const CartProvider = ({ children }) => {//componente proveedor del contex
 
     const addItem =(item) => {//agrega un item al carrito
         if (exists(item.id)) {//si el producto ya existe en el carrito
-            alert("El producto ya fue agregado al carrito");
-            return;//si el producto ya existe, no lo agrega y sale de la funcion
-        }
-
+           const updateCart = cart.map((prod) =() => {
+            if(prod.id === item.id){
+                return {...prod, quantity: prod.quantity + item.quantity};
+            } else {
+                return prod;
+            }
+            });
+            setCart (updateCart);
+            alert (`Se actualizaron los ${item.name} en el carrito`);
+        } else {
         setCart ([...cart, item]);
-        alert(`${item.nombre} agregado al carrito`);
+        alert(`${item.name} agregado al carrito`);
+        }
     };
+
+/*Eliminar productos*/
+const deleteItem = (id) => {
+    const updatedCart = cart.filter((p) => p.id !== id);
+    setCart (updatedCart);
+    alert ("Producto eliminado del carrito");
+    
+}
+
+/*Vaciar carrito*/
     const clearCart = () => {
         setCart ([]);
     };
 
+/*Calcula el total de items en el carrito*/
+
     const getTotalItems = () => {//retorna la cantidad de productos en el carrito
-        if (cart.length) {
-            return cart.length;
-        }
+        const totalItem =cart.reduce((acc, p) => acc + p.quantity, 0);
+        return totalItem;
     };
 
+/*Calcular total de la compra*/    
+const getTotalPrice = () => {
+    const totalPrice = cart.reduce((acc, p) => acc + p.quantity * p.price, 0);
+    return Math.round (totalPrice * 100) / 100; //redondea a 2 decimales
+}
 
-    const value = {cart, addItem, clearCart, getTotalItems };//guardo una referencia 
+const checkout =() => {
+    const orderData = confirm ("Desea finalizar la compra?")
+    if (orderData){
+        alert ("Gracias por su compra");
+        clearCart();
+}
+};
+
+    const value = {cart, addItem, clearCart, getTotalItems, deleteItem, getTotalPrice, checkout };//guardo una referencia 
     return <CartContext.Provider value={value}> {/*paso la referencia como objeto */}
         {children}
     </CartContext.Provider> ;
