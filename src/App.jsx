@@ -6,6 +6,8 @@ import { ItemListContainer } from './componentes/ItemListContainer/ItemListConta
 import { ItemDetailContainer } from './componentes/ItemDetailContainer/ItemDetailContainer';
 import { CartProvider } from './context/CartContext/CartProvider';
 import { Cart } from './componentes/Cart/Cart';
+import { ProductFormContainer } from './componentes/adminComponents/ProductFormContainer/ProductFormContainer';
+
 
 
 function App() {
@@ -21,12 +23,19 @@ function App() {
           <Route path="/"
           element= {<ItemListContainer titulo={"Bienvenidos"}/>}
           />
+          <Route path="/category/:category"
+          element= {<ItemListContainer titulo={"Bienvenidos"}/>}
+          />
           {/* le paso el id por params */}
           <Route path="/detail/:id" 
           element= {<ItemDetailContainer/>}
           />
           <Route path="/carrito"
           element= {<Cart/>}/>
+        
+          <Route path="/admin"
+          element= {<ProductFormContainer/>}/>
+          
         </Routes>
 
         <Footer />
