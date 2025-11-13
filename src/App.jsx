@@ -1,14 +1,14 @@
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { ItemListContainer } from './componentes/ItemListContainer/ItemListContainer';
-import { ItemDetailContainer } from './componentes/ItemDetailContainer/ItemDetailContainer';
+import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
+import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
 import { CartProvider } from './context/CartContext/CartProvider';
-import { Cart } from './componentes/Cart/Cart';
-import { ProductFormContainer } from './componentes/adminComponents/ProductFormContainer/ProductFormContainer';
+import { Cart } from './components/Cart/Cart';
+import { ProductFormContainer } from './components/adminComponents/ProductFormContainer/ProductFormContainer';
 import { MainLayout } from './layouts/MainLayout';
 import { AdminLayouts } from './layouts/AdminLayouts';
-import { Login } from './componentes/Login/Login';
-import { RutaProtegida } from './componentes/RutaProtegida/RutaProtegida';
+import { Login } from './components/Login/Login';
+import { RutaProtegida } from './components/RutaProtegida/RutaProtegida';
 
 
 
