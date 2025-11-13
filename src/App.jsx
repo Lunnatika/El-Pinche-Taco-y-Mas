@@ -1,6 +1,5 @@
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { Footer } from './componentes/Footer/Footer';
 import { ItemListContainer } from './componentes/ItemListContainer/ItemListContainer';
 import { ItemDetailContainer } from './componentes/ItemDetailContainer/ItemDetailContainer';
 import { CartProvider } from './context/CartContext/CartProvider';
@@ -59,7 +58,7 @@ function App() {
           
         </Routes>
 
-        <Footer />
+        
       
       </CartProvider>
       
