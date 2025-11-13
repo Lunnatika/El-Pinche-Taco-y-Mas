@@ -2,6 +2,7 @@ import { useEffect, useState} from "react";
 import { ItemList } from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
 import "./ItemListContainer.css"
+import { getProducts } from "../../services/products";
 
 export const ItemListContainer =({titulo}) => { //componente con logica , estados y llamadas a api o json local
     const[products, setProducts] = useState([]); //estado inicial vacio
@@ -9,20 +10,8 @@ export const ItemListContainer =({titulo}) => { //componente con logica , estado
 
 
     useEffect(() => {
-        fetch("/data/products.json")
-            .then((res) => {    
-                if(!res.ok){
-                    throw new Error("Error en la llamada a la API");
-                }
-                return res.json();
-            })
-            .then((data) => {
-                if(category){
-                    setProducts(data.filter((prod) => prod.category === category));
-                } else {
-                    setProducts(data);
-                }
-            })
+        getProducts(category)
+            .then((data) => setProducts(data))
             .catch((err) => {
                 console.log(err);
             });
@@ -35,4 +24,6 @@ export const ItemListContainer =({titulo}) => { //componente con logica , estado
 
         </section>
     );
+
+    
 };

@@ -7,10 +7,10 @@
 
 import "./Item.css"
 
-export const Item = ({name, price, description, images, children}) => {
+export const Item = ({name, price, description, image, children}) => {
     return(
         <article className="producto">
-                <img src={images} alt={name} className="producto-imagen"/>  
+                <img src={image} alt={name} className="producto-imagen"/>  
                 <h2>{name}</h2>
                 <p>Precio: ${price}</p>
                 <p>Descripcion: {description}</p>

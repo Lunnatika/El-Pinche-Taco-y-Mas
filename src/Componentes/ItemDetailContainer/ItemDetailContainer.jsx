@@ -8,28 +8,18 @@ export const ItemDetailContainer = () => {
     const {id} = useParams();
 
     useEffect(() => {
-        fetch("/data/products.json")
+        fetch(`https://6900ea90ff8d792314bbffb4.mockapi.io/product/${id}`)
         .then((res) => {
                 if (!res.ok) {
                     throw new Error("No se encontro el producto");
             }
             return res.json();
         }) 
-        .then((data) => {
-            const found = data.find((p) => p.id === id);
-            if (found) {
-                setDetail(found);
-            } else {
-                throw new Error("Producto no encontrado");
-            }           
-        
-        })
-        .catch((err) => {
-             console.log(err);
-
-        });
-    
-},[id]);
+        .then((data) => setDetail(data))
+        .catch((err) => console.log(err));
+    }, [id]);
+           
+           
 
     return <main>
         {Object.keys(detail).length ? (
