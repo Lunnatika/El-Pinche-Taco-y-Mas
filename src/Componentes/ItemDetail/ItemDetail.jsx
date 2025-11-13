@@ -1,6 +1,6 @@
 
-import { useCartContext } from "../../context/CartContext/CartContext";
-import { Item } from "../Item/Item";
+import { useCartContext } from "../../context/CartContext/CartContext.js";
+import { Item } from "../Item/Item.jsx";
 
 import { Count } from "../Count/Count.jsx";
 
